@@ -44,7 +44,6 @@ check_selinux() {
   fi
 }
 
-<<<<<<< HEAD
 check_pkg() {
   check=$(which $1 2>/dev/null)
   if [[ -z "$check" ]] ; then
@@ -53,8 +52,6 @@ check_pkg() {
   fi
 }
 
-=======
->>>>>>> 6c2b36ee880942b9f4de5faf3322db64193e0ad7
 cleanup_logs() {
   info "cleaning up logs"
   find /var/log -type f | xargs rm -f
@@ -187,15 +184,12 @@ case `uname -s` in
     ;;
 esac
 
-<<<<<<< HEAD
 rm -f /lib/smartdc/.firstboot-complete-do-not-delete
 
 sed -i "/^HOSTNAME/d" /etc/sysconfig/network
 
 check_pkg sfdisk
 check_pkg parted
-=======
->>>>>>> 6c2b36ee880942b9f4de5faf3322db64193e0ad7
 
 if [[ ${WARNING} != "" ]] ; then
   printf "\n"

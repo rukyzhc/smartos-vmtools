@@ -52,11 +52,7 @@ fi
 
 partexists=$($SFDISK -l $DATA_DISK_DEV 2>/dev/null | grep "${DATA_DISK_DEV}1" \
   | awk '{print $NF}')
-<<<<<<< HEAD
 if [[ -n "$partexists" && "$partexists" != "Empty" ]] ; then
-=======
-if [[ -n "$partexists" ]] ; then
->>>>>>> 6c2b36ee880942b9f4de5faf3322db64193e0ad7
   lib_smartdc_fatal "partition table already exists. skipping."
 fi
 
